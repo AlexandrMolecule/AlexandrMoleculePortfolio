@@ -1,0 +1,25 @@
+{
+    "language": "English",
+    "navbar_home": "HOME",
+    "navbar_about": "ABOUT",
+    "navbar_projects": "PROJECTS",
+    "navbar_contact": "CONTACT",
+    "city": "Voronezh, Russia",
+    "about_header": "About Me",
+    "about_who": "Alexandr Gerasimov, Flutter novice devoloper",
+    "about_text": "I am a second-year student, I have been developing mobile applications for 6 months, recently completed my first serious (for me) order on freelance, created several pet-projects, previously developed web-applications for 1 year, but when I learned about Flutter I completely immersed myself in it",
+    "about_technologies": "Technologies I have worked with:",
+    "about_name": "Name",
+    "name": "Alexandr Gerasimov",
+    "about_advice": "click once to copy",
+    "about_mobile_tile_darkmode": "Dark Mode",
+    "about_mobile_tile_language": "Language",
+    "projects_header": "Portfolio",
+    "contact_header": "Сontact me",
+    "projects_advice": "Tap to read more"
+
+
+
+
+
+}
