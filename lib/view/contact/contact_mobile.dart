@@ -9,7 +9,7 @@ import '../../constants.dart';
 class ContactMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> kContactDetails = ["GitHub", "Telegram: @camugyro", "sanyamolekula@gmail.com"];
+    List<String> kContactDetails = ["Alexandr Molecule", "Alexandr Gerasimov", "Telegram: @camugyro", "sanyamolekula@gmail.com"];
 
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
@@ -19,13 +19,13 @@ class ContactMobile extends StatelessWidget {
           CustomSectionHeading(text: "\n${AppLocalizations.of(context)!.contact_header}"),
           SizedBox(height: 5,),
           CarouselSlider.builder(
-            itemCount: 3,
+            itemCount: 4,
             itemBuilder: (BuildContext context, int itemIndex, int index) =>
                 Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: ProjectCard(
-                needToCopy: index == 2? true : null,
-                projectLink: index == 1? "https://t.me/camugyro" : index == 0? 'https://github.com/AlexandrMolecule': null,
+                needToCopy: index == 3? true : null,
+                projectLink: index == 2? "https://t.me/camugyro" : index == 0? 'https://github.com/AlexandrMolecule': index == 1? 'https://www.linkedin.com/in/alexandr-gerasimov' : null,
                 cardWidth: width > 480 ? width * 0.5 : width * 0.8,
                 projectIconData: kContactIcons[index],
                 projectTitle: kContactTitles[index],

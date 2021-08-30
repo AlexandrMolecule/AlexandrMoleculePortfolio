@@ -10,7 +10,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../constants.dart';
 
 class AboutTab extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final _themeProvider = Provider.of<ThemeProvider>(context);
@@ -24,32 +23,29 @@ class AboutTab extends StatelessWidget {
       color: _themeProvider.lightTheme ? Colors.white : Colors.black,
       child: Column(
         children: [
-          CustomSectionHeading(text: AppLocalizations.of(context)!.about_header),
+          CustomSectionHeading(
+              text: AppLocalizations.of(context)!.about_header),
           Container(
             clipBehavior: Clip.none,
-              height: height * 0.3,
-              width: width *0.3,
+            height: height * 0.3,
+            width: width * 0.3,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image:AssetImage(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    image: AssetImage(
                   'assets/avatar.jpg',
                   // height: height * 0.27,
                   // fit: BoxFit.fill,
-                ) 
-              ) 
-            ),
+                ))),
           ),
-          
           SizedBox(
             height: height * 0.03,
           ),
-          
           SizedBox(
             height: height * 0.032,
           ),
           Text(
-           AppLocalizations.of(context)!.about_who,
+            AppLocalizations.of(context)!.about_who,
             style: GoogleFonts.montserrat(
               fontSize: height * 0.035,
               fontWeight: FontWeight.w400,
@@ -113,40 +109,39 @@ class AboutTab extends StatelessWidget {
             children: [
               AboutMeMetaData(
                 data: AppLocalizations.of(context)!.about_name,
-            information: AppLocalizations.of(context)!.name,
+                information: AppLocalizations.of(context)!.name,
               ),
               SizedBox(
                 width: width > 710 ? width * 0.2 : width * 0.05,
               ),
               InkWell(
-            onDoubleTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  duration: Duration(seconds: 1),
-                  backgroundColor: kPrimaryColor,
-                  content: Text(AppLocalizations.of(context)!.about_advice)));
-            },
-            onTap: () {
-              Clipboard.setData(
-                       ClipboardData(text: "sanyamolekula@gmail.com"))
-                  .then((_) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    backgroundColor: kPrimaryColor,
-                    content: Text("Email address copied to clipboard")));
-              });
-            },
-            child: AboutMeMetaData(
-              data: "Email",
-              information: "sanyamolekula@gmail.com",
-              alignment: Alignment.centerLeft,
-            ),
-          ),
-              
+                onDoubleTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      duration: Duration(seconds: 1),
+                      backgroundColor: kPrimaryColor,
+                      content:
+                          Text(AppLocalizations.of(context)!.about_advice)));
+                },
+                onTap: () {
+                  Clipboard.setData(
+                          ClipboardData(text: "sanyamolekula@gmail.com"))
+                      .then((_) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        backgroundColor: kPrimaryColor,
+                        content: Text("Email address copied to clipboard")));
+                  });
+                },
+                child: AboutMeMetaData(
+                  data: "Email",
+                  information: "sanyamolekula@gmail.com",
+                  alignment: Alignment.centerLeft,
+                ),
+              ),
             ],
           ),
           SizedBox(
             height: height * 0.02,
           ),
-          
         ],
       ),
     );

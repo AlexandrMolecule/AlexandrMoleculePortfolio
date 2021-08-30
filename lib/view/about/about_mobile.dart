@@ -26,18 +26,16 @@ class AboutMobile extends StatelessWidget {
           CustomSectionHeading(
               text: AppLocalizations.of(context)!.about_header),
           Container(
-              height: height * 0.27,
-              width: width *0.27,
+            height: height * 0.27,
+            width: width * 0.27,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image:AssetImage(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    image: AssetImage(
                   'assets/avatar.jpg',
                   // height: height * 0.27,
                   // fit: BoxFit.fill,
-                ) 
-              ) 
-            ),
+                ))),
           ),
           SizedBox(
             height: height * 0.03,
